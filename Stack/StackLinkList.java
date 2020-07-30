@@ -33,8 +33,19 @@ public class StackLinkList {
             while(temp!=null)
             {
                 System.out.print(temp.data+" ");
+                top = temp;
                 temp=temp.next;
             }
+            top = temp;
+
+
+            // temp = top;
+            // while(temp!=null)
+            // {
+            //     System.out.print(temp.data+" ");
+            //     top = temp;
+            //     temp=temp.next;
+            // }
             
         }
 
@@ -47,5 +58,7 @@ public class StackLinkList {
      top=push(top,4);
 
      pop(top);
+     
+     
    }
 }
