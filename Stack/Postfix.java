@@ -136,7 +136,7 @@ public class Postfix {
 
     public static void main(String[] args) {
 
-        String str = "(a+b)/c*d-(e+f)^g-h";
+        String str = "a+b*(c^d-e)^(f+g*h)-i";
         String postfixString = operation(str);
         System.out.println(postfixString);
 
