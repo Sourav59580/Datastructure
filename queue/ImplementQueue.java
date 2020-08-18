@@ -29,7 +29,7 @@ class Queue
     // Adding an element
   void enQueue(int element) {
     if (isFull()) {
-      System.out.println("Queue is full");
+      System.out.println("Overflow");
     } else {
       if (front == -1)
         front = 0;
@@ -42,7 +42,7 @@ class Queue
   int deQueue() {
     int element;
     if (isEmpty()) {
-      System.out.println("Queue is empty");
+      System.out.println("Underflow");
       return (-1);
     } else {
       element = items[front];
@@ -64,7 +64,7 @@ class Queue
     } else {
       System.out.println("Front -> " + front);
       System.out.println("Items -> ");
-      for (i = front; i != rear; i = (i + 1) % SIZE)
+      for (i = front; i != rear; i = (i + 1) % size)
         System.out.print(items[i] + " ");
       System.out.println(items[i]);
       System.out.println("Rear -> " + rear);
@@ -78,15 +78,10 @@ public class ImplementQueue
 {
     public static void main(String[] args) {
         Queue q = new Queue();
-        q.enqueue(1);
-        q.enqueue(2);
-        q.enqueue(3);
-        q.enqueue(4);
-        q.enqueue(5);
-        q.enqueue(6);
-
-
-        for(int i=0;i<=q.rear;i++)
-       System.out.print(q.dequeue()+" ");
-    }
+        q.enQueue(1);
+        q.enQueue(2);
+        q.enQueue(3);
+        q.enQueue(4);
+        q.enQueue(5);
+      }
 }

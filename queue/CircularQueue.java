@@ -1,6 +1,6 @@
 class Queue {
 
-    int maxSize =100;
+    int maxSize =4;
     int rear = -1;
     int front = -1;
     int aQueue[] = new int[maxSize];
@@ -41,9 +41,20 @@ public class CircularQueue {
         q.enQueue(2);
         q.enQueue(3);
         q.enQueue(4);
-        q.enQueue(5);
-
         q.deQueue();
+        q.deQueue();
+        q.deQueue();
+        q.enQueue(5);
+        q.enQueue(6);
+        q.deQueue();
+        q.deQueue();
+        q.deQueue();
+        q.enQueue(7);
+        q.deQueue();
+
+
+
+        
     }
 
 }
