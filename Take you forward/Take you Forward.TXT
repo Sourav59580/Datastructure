@@ -1,0 +1,54 @@
+********************************** Day 1 **********************************
+
+1. Find the duplicate number (Floy cycle detection)
+   --------------------------------------------------
+
+    static int DuplicateNumber(int[] arr)
+    {
+        int slow = arr[0];
+        int fast = arr[0];
+        do{
+           slow = arr[slow];
+           fast = arr[arr[fast]];
+        }while(fast!=slow);
+
+        fast = arr[0];
+
+        while(fast!=slow){
+            slow = arr[slow];
+            fast = arr[fast];
+        }
+        return slow; 
+    } 
+
+______________________________________________________________________________________
+
+2. Sort an array of 0s, 1s and 2s 
+   -----------------------------------
+
+   static void solution(int a[],int n){
+               int low =0;
+	       int mid =0;
+	       int high = n-1;
+	       
+	       while(mid<=high){
+	           if(a[mid]==0){
+	               int temp = a[low];
+	               a[low] = a[mid];
+	               a[mid] = temp;
+	               low++;
+	               mid++;
+	           }else if(a[mid]==1){
+	               mid++;
+	           }else if(a[mid]==2){
+	               int temp = a[high];
+	               a[high] = a[mid];
+	               a[mid] = temp;
+	               high--;
+	           }
+	           
+	       }
+   }
+
+___________________________________________________________________________________________________
+
